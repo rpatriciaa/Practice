@@ -1,15 +1,8 @@
 import pandas as pd
 from postgres import connect,copy_from_stringio,select_data
 from mapping import mapping
+from con import param_dic
 
-# CONNECTION string
-param_dic = {
-    "host"      : "localhost",
-    "database"  : "fortune_dev",
-    "user"      : "dbadmin",
-    "password"  : "12345",
-    "options"   : "-c search_path=fortune"
-}
 
 conn = connect(param_dic)
 #sectors = pd.read_csv('Data Load for Fortune Project/Fortune1000.csv',header=0, sep=';', usecols=['sector'], skipinitialspace=True).drop_duplicates()
